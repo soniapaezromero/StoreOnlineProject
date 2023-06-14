@@ -33,6 +33,7 @@ class DefaultController extends AbstractController
         }
            $imagenurl="/public/images/fondo.jpg";
           return $this->render('default/home.html.twig', [
+                 'label'=>'home',
                 'controller_name' => 'DefaultController',
                  'imagen' =>$imagenurl,
             ]);

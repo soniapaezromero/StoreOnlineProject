@@ -2,13 +2,13 @@
 
 {% block body %}
 
-    <div class="container" style="background: navajowhite;border: 0;">
+    <div class="container" style="background: navajowhite;border: 0;margin-left: 10px;margin-top: 10px;">
     <p></p>
         <p></p>
         <p></p>
         <p></p>
         <h1>{{ name }}</h1>
-        <table class="table" style="width: 750px;margin-right: 0px;">
+        <table class="table" style="margin-right: 50px;width: 1100px;">
             <thead>
             <tr >
                 <th style="width: 5%;">Id</th>
@@ -41,7 +41,7 @@
             {% endfor %}
             </tbody>
         </table>
-
+        <a href="{{ path('app_producto_index') }}" class="btn btn-info w-25">back to list</a>
     </div>
 
 {% endblock %}

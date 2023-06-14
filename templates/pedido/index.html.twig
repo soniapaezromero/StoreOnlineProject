@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Pedido index{% endblock %}
+{% block title %}Pedidos{% endblock %}
 
 {% block body %}
     {% for label, messages in app.flashes %}
@@ -13,11 +13,10 @@
             </div>
         {% endfor %}
     {% endfor %}
-    <div class="container" style="background: navajowhite;border: 0;">
-
+    <div class="container" style="background: navajowhite;border: 0;margin-left: 10px;with:1000px;margin-top: 10px;">
     <h1>Pedido index</h1>
 
-    <table class="table">
+    <table class="table" style="width: 800px;">
         <thead>
             <tr>
                 <th>Id</th>
@@ -26,8 +25,7 @@
                 <th>Creado</th>
                 <th>Estado</th>
                 <th>Total</th>
-
-                <th>Actualizado</th>
+                <th>Axtions</th>
 
             </tr>
         </thead>
@@ -38,8 +36,8 @@
                 <td>{{ pedido.referencia }}</td>
                 <td>{{ pedido.clientePedido }}</td>
                 <td>{{ pedido.createdAt|date("d/m/Y") }}</td>
-                <td>{{ pedido.total|number_format(2, ',', '.') }}€</td>
                 <td>{{ pedido.estado}}</td>
+                <td>{{ pedido.total|number_format(2, ',', '.') }}€</td>
                 <td>
                     <a href="{{ path('app_pedido_show', {'id': pedido.id}) }}">show</a>
                     <a href="{{ path('app_pedido_edit', {'id': pedido.id}) }}">edit</a>
